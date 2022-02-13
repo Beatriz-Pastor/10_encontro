@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>10º Encontro de CDM</title>
+    <link href="http://fonts.cdnfonts.com/css/gabo-drive" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/0523f2813fe88b679addd37b3539660a?family=Gabo+Drive" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .galeria{
+        background-image: url('Imagens/galeria.jpg');
+    background-size: cover;
+    text-align: center;
+ }
+
+ #Galeria .row {
+   padding: 7%;
+   padding-top: 200px;
+ }
+
+        .galeria h1{
+            font-size: 60px;
+        }
+.inscricoes .texto{
+  padding-top: 100px;
+}
+
+.kit {
+  padding-top: 60px;
+}
+
+.kit h3{
+  font-family:"GaboDrive";
+  color: #02023C;
+}
+
+.kit p{
+  font-family:'Actor Regular';
+  color: #02023C;
+}
+
+.kit .col-lg-6{
+  padding-left: 100px;
+}
+
+.flex-column {
+            max-width: 260px;
+        }
+        
+        img {
+            margin: 5px;
+        }
+        
+        .scale {
+            transform: scaleY(1.05);
+            padding-top: 5px; 
+        }
+
+              /* USAGE -> The caption text will be displayed on mouseover.
+        Please use a unique caption text for each image ID    
+        */
+          
+        .img_1 {width:100%;height:600px;margin:20px auto; transition: all .2s ease-in-out;} 
+.img_2 {width:100%;height:400px;margin:20px auto; transition: all .2s ease-in-out;} 
+
+
+
+
+
+.img_1{
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img_1 h1{
+  color: white;
+}
+
+.img_1 p{
+  color: #EFA506;
+}
+ .img_1 .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.img_1 .body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 4vw;
+}
+
+.img_1 .text {
+  position: relative;
+  opacity: 0;
+  transform: translateY(5vh);
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+  
+}
+
+.img_1 :hover .text {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media only screen and (max-width: 48rem) {
+  
+  .img_1  {
+    width: 46vw;
+  }
+}
+@media only screen and (max-width: 32rem) {
+ 
+   .img_1  {
+    width: 100%;
+    margin: 0.5vh 0;
+  }
+}
+
+
+
+.img_2{
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img_2 h1{
+  color: white;
+}
+.img_2 p{
+  color: #EFA506;
+
+}
+ .img_2 .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.img_2 .body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 4vw;
+}
+
+.img_2 .text {
+  position: relative;
+  opacity: 0;
+  transform: translateY(5vh);
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+  align-items: center;
+  
+}
+
+.img_2 :hover .text {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media only screen and (max-width: 48rem) {
+
+  .img_2  {
+    width: 46vw;
+  }
+}
+@media only screen and (max-width: 32rem) {
+ .img_2 {
+    width: 100%;
+    margin: 0.5vh 0;
+  }
+}
+
+
+.gif_galeria {
+   width: 400px; /* largura da imagem máscara */
+   height:400px; /* altura da imagem máscara */
+   position:absolute;
+   top:70%;
+   align-items: center;
+   left: 36%;
+   background-color: white;
+   border: 30px solid white;
+   border-radius: 200px;
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
+      <div class="container">
+        <a class="navbar-brand" href="exemplo.html"> <img src="logo.png" alt="campanha" width="60px"> </a>
+        <!--botão que é criado para ficar responsivo-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-light" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="sobre.html">Sobre o Encontro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="exemplo.html#agenda">Agenda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="inscricoes.html">Inscrições</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="oradores.html">Oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="exposicoes.html">Exposições</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="projetos.html">Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contactos.html">Contactos</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--BOTÃO TOPO-->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i></i></button>
+
+    <div class="galeria w-100 vh-100 d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="texto">
+        <h1>Exposições CDM</h1><br>
+        <p>Bem-vindos ao local onde iremos colocar exposições do evento, bem como alguns dos trabalhos realizados<br>pelos alunos de CDM dos diferentes anos!</p>
+        <a href="exposicoes.html#Galeria"><i class="bi bi-chevron-compact-down" style="color: white; font-size: 40px;"></i></a>
+      </div> 
+      
+      </div>
+      
+      </div>
+      
+      <div class="gif_galeria d-flex align-items-center justify-center"><img src="Máquinas_Fotográficas.gif" style=" border-radius: 200px;" width="100%"></div>
+
+
+        
+<div class="container position-relative overflow-hidden" id="Galeria">
+	
+	<div class="row">
+		<div class="col-lg-6">
+		  <div class="lc-block">
+						<div class="img_1 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/encontro.jpg);" id="The Photo Title">
+              <div class="caption d-flex align-items-center justify-center">
+                <div class="body"><center>
+                  <h1 style="padding-left: 60px;">Encontro CDM</h1>
+                  <p style="padding-left: 60px;">Momentos durante o 10º Encontro de CDM</p>
+                  <div class="text">
+                    
+                      <a href="g_encontro.html" style="padding-left: 60px;">
+                        <button class="button_blue" style:="cursor: pointer;"><h7>ver mais</h7></button>
+                      </a>
+                    
+                </div></center>
+                </div>
+              </div>
+            </div>
+
+            <div class="img_1 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/programacao.png);" id="The Photo Title">
+              <div class="caption d-flex align-items-center">
+              <div class="body"><center>
+                <h1>Programação Web</h1>
+                <p>Trabalhos dos alunos relativamente à cadeira de programação</p>
+                <div class="text">
+                  
+                    <a href="g_progamacao.html">
+                      <button class="button_blue" style:="cursor: pointer;"><h7>ver mais</h7></button>
+                    </a>
+                  
+              </div></center>
+              </div>
+            </div>
+            </div>
+
+           
+
+            <div class="img_2 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/animacao.png);" id="The Photo Title">
+              <div class="caption d-flex align-items-center">
+              <div class="body"><center>
+                <h1>Animação</h1>
+                <p style="padding-left: 20px;">Trabalhos dos alunos relativamente à cadeira de Animação I</p>
+                <div class="text">
+                  
+                    <a href="g_anima.html">
+                      <button class="button_blue" style:="cursor: pointer;"><h7>ver mais</h7></button>
+                    </a>
+                 
+              </div> </center>
+              </div>
+            </div>
+            </div>
+
+          
+      </div>
+    </div>
+					
+          <div class="col-lg-6">
+            <div class="lc-block">
+              <div class="img_2 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/design.jpg);" id="The Photo Title">
+                <div class="caption d-flex align-items-center">
+                <div class="body"><center>
+                  <h1>Design</h1>
+                  <p  style="padding-left: 20px;">Trabalhos dos alunos relativamente à unidade curricular de Design</p>
+                  <div class="text">
+                    
+                      <a href="g_design.html">
+                        <button class="button_blue" style:="cursor: pointer;"><h7>ver mais</h7></button>
+                      </a>
+                  
+                </div>  </center>
+                </div>
+              </div>
+              </div>
+              <div class="img_2 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/Tecnologias.png);" id="The Photo Title">
+              <div class="caption d-flex align-items-center">
+                <div class="body"> <center>
+                  <h1 style="padding-left: 30px;">Tecnologias Interativas</h1>
+                  <p style="padding-left: 30px;">Trabalhos dos alunos relativamente à cadeira de TI</p>
+                  <div class="text">
+                   
+                      <a href="g_tecnologias.html">
+                        <button class="button_blue" style:="cursor: pointer; padding-left: 160px;"><h7>ver mais</h7></button>
+                      </a>
+                    
+                </div></center>
+                </div>
+              </div>
+              </div>
+              <div class="img_1 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/videoarte.png);" id="The Photo Title">
+               <div class="caption d-flex align-items-center">
+                <div class="body"><center>
+                  <h1 style="padding-left: 30px;">Projetos Audiovisuais</h1>
+                  <p style="padding-left: 30px;">Trabalhos dos alunos relativamente à cadeira de vídeo</p>
+                  <div class="text">
+                    
+                      <a href="g_videoarte.html">
+                        <button class="button_blue" style:="cursor: pointer; padding-left: 400px;"><h7>ver mais</h7></button>
+                      </a>
+                    
+                </div></center>
+                </div>
+              </div>
+              </div>
+              <div class="img_2 rounded" style="background-size: cover; background-position: center; background-image: url(Imagens/Galeria/fotografia.png);" id="The Photo Title">
+                <div class="caption d-flex align-items-center">
+                <div class="body"><center>
+                  <h1 style="padding-left: 30px;">Fotografia</h1>  
+                  <p style="padding-left: 30px;">Trabalhos dos alunos relativamente à cadeira de fotografia</p></center>
+                  <div class="text">
+                  
+                      <a href="g_fotografia.html">
+                        <button class="button_blue" style:="cursor: pointer; padding-left: 700px;"><h7>ver mais</h7></button>
+                      </a>
+                    
+                </div>
+                </div>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+  </div>
+				</div>
+			</div>
+
+
+      <br><br><br>
+      <!--FOOTER-->
+    <center> <!--footer alinhado ao centro-->
+      <footer class="footer justify-content-center"> <!--criar uma classe footer para estilizá-lo em CSS-->
+      <div class="container">
+          <div class="row" style="padding: 30px;"> <!--criar linha para contéudo do footer-->
+
+              <div class="col col-lg-4"> <!--Criar coluna com o espaço de 4 para o conteúdo em Bootstrap-->
+              <img src="logo.png" width="70px"> <!--inserimos o logo e definimos o tamanho-->   
+              </div>
+              
+              <div class="col col-lg-4">   
+              <p id="p3"> <br>encontrocdm@esec.pt </p>
+              </div>
+              
+              <div class="col col-lg-4">   
+              <p id="p3"> <br> Redes Sociais: 
+              <a href="#"><i class="bi bi-instagram" style="font-size: 30px;color:white; padding: 10px"></i></a> <!--inserir icons já predifinidos no banco de dados do Bootstrap-->
+              <a href="#"><i class="bi bi-whatsapp"style="font-size: 30px;color: white ; padding: 10px;"></i></a>
+              <a href="#"><i class="bi bi-twitter"style="font-size: 30px; color: white; padding: 10px;"></i></a>
+              </p>
+              </div>
+      </div>
+      </footer>
+  </center>
+			
+
+        
+    <!--Este java tem haver com o nosso menu fixo ao topo que depois quando se faz scroll deixa de estar transparente e mudar de cor-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          //nav.classList.add('shadow')
+          nav.classList.add("nav-colored", "shadow");
+        nav.classList.remove("nav-transparent");
+        } else {
+          //nav.classList.remove('shadow');
+          nav.classList.add("nav-transparent");
+        nav.classList.remove("nav-colored","shadow" );
+        //as novas cores que este retoma estão alteradas no nosso css
+        }
+      });
+    </script>
+
+    <!--Script do botão de voltar ao topo-->
+    <script>
+      //Vai procurar o botão acima
+      var mybutton = document.getElementById("myBtn");
+    
+      // Quando o descer cerca 20px da página vai aparecer o botão
+      window.onscroll = function() {scrollFunction()};
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+      }
+    
+      // Quando carregar no botão volta ao topo da página
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+  </body>
+</html>

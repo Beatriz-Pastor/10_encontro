@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>10º Encontro de CDM</title>
+    <link href="http://fonts.cdnfonts.com/css/gabo-drive" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/0523f2813fe88b679addd37b3539660a?family=Gabo+Drive" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+      .inscricoes{
+        background-image: url('Imagens/kit.jpg');
+    background-size: cover;
+    text-align: center;
+width: 100%;
+height: 500px;     }
+
+.form{
+        background-image: url('Imagens/form_kit.png');
+    background-size: cover;
+    text-align: center;
+width: 100%;
+height: 100%;    }
+
+
+
+
+.kit h3{
+  font-family:"GaboDrive";
+  color: #02023C;
+}
+
+.kit p{
+  font-family:'Actor Regular';
+  color: #02023C;
+}
+
+.kit .col-lg-6{
+  padding-left: 100px;
+}
+
+
+
+
+
+#form label{
+  float: left;
+  color: #65C3D2;
+  font-family: 'GaboDrive';
+  font-size: 20px;
+  padding: 5px;
+}
+
+#form h6{
+  color: #65C3D2;
+  font-family: 'GaboDrive';
+  font-size: 20px;
+}
+
+#form .col-lg-6 {
+  padding: 20px;
+}
+
+#form button {
+    background-color: white;
+    color: #65C3D2;
+    border: 1px solid white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+
+#form button:hover {
+    background-color: #65C3D2;
+    color: white;
+    border: 1px solid #65C3D2;
+}
+
+input[type=text], input[type=email], input[type=tel]{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family:'Actor Regular';}
+
+
+  input[type="checkbox"] {
+    color: white;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+
+.saco {
+   width: 750px; /* largura da imagem máscara */
+   height:750px; /* altura da imagem máscara */
+   position:absolute;
+   top:15%;
+   align-items: center;
+   left:-200px;
+   transform: rotate(-15deg);
+
+}
+
+.garrafa {
+   width: 400px; /* largura da imagem máscara */
+   height:400px; /* altura da imagem máscara */
+   position:absolute;
+   top:40%;
+   align-items: center;
+   right: 0px;
+}
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
+      <div class="container">
+        <a class="navbar-brand" href="exemplo.html"> <img src="logo.png" alt="campanha" width="60px"> </a>
+        <!--botão que é criado para ficar responsivo-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-light" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="sobre.html">Sobre o Encontro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#agenda">Agenda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="inscricoes.html">Inscrições</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="oradores.html">Oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="exposicoes.html">Exposições</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="projetos.html">Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contactos</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--BOTÃO TOPO-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i></i></button>
+
+
+    <div class="inscricoes d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="texto">
+        <h1>Vem descobrir o que temos preparado para ti!</h1>
+        <p>Reserva já o teu kit!</p>
+      </div>
+        <div class="kit">
+        <a href="#form">
+          <button class="button_roxo" style:="cursor: pointer;"><h7>Inscreve-te Já</h7></button>
+        </a></div>
+      </div>
+      </div>
+      <div class="saco"><img src="Imagens/kit/saco_1.png" width="100%"></div>
+      <div class="garrafa"><img src="Imagens/kit/garrafas.png" width="100%"></div>
+
+
+      <div class="container kit">
+        <div class="row d-flex justify-content-center">
+          <div class="col col-lg-4 text-center">
+            <img src="Kit.gif" alt="New York" width="400px">
+            
+          </div>
+        
+          <div class="col col-lg-6 text-left" style="padding-top :60px">
+           <h3>O nosso KIT contém:</h3>
+              <p>- 1 saco;<br>
+                - 1 garrafa de água;<br>
+                - 1 bloco de notas;<br>
+                - 2 canetas;<br>
+                - 1 pen;<br>
+                - 1 suporte telemóvel;<br><br><br>
+                *Podes reservar o teu kit quando te estiveres a inscrever nas conferências/workshops.
+              </p>
+          </div>
+        </div>
+        </div>
+
+
+        <div class="form d-flex justify-center align-items-center" id="form">
+
+          <div class="container" style="padding-top:100px;">
+            
+
+          
+              <h1>Formulário de Inscrição</h1> <!--Título com outra formatação de h2 em CSS através do (id="hh2") para conseguir aumentar a distância em relação a navbar-->
+              <p id="p2">-Vagas limitadas-</p> <!--criar outra predifinição em CSS do parágrafo para poder ser legível em cima das imagens através do (id="p2")-->
+          
+              <form name="myForm" method="post" action="mailto:10cdm.cdm@gmail.com" enctype="text/plain" style="padding-left: 7%; padding-right: 7%;">
+
+            
+              <div class="row">
+                <div class="col text-left">
+                  <label>Nome:</label> <!--Predifinição do texto/titulo da caixa para inserir texto-->
+                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{1,15}$"> <!--caixa para inserir o nome com os requisitos aceites para a validação do mesmo-->
+                <br>
+                <label for="exampleFormControlInput1">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <!--caixa para inserir o email com os requisitos aceites para a validação do mesmo-->
+                <br>
+                  <label for="comment">NIF:</label>
+                  <input type="text" class="form-control" id="nif" name="nif" placeholder="NIF" required maxlength="9" pattern="[0-9]{9}"><!--caixa para inserir o sobrenome com os requisitos aceites para a validação do mesmo-->
+                <br>
+                </div>
+                  
+                <div class="col text-left"> <!--style="padding-left: 80px;"--> <!--conteúdo da segunda coluna alinhado a esquerda-->
+                  <label for="comment">Sobrenome:</label>
+                  <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{1,15}$"><!--caixa para inserir o sobrenome com os requisitos aceites para a validação do mesmo-->
+                <br>
+                  <label for="comment">Telemóvel</label>
+                  <input type="text" class="form-control" id="telemovel" name="telemovel" placeholder="Nº de telemóvel" required maxlength="9" pattern="[0-9]{9}"><!--caixa para inserir o sobrenome com os requisitos aceites para a validação do mesmo-->
+                <br>
+                  <label for="comment">Habilitações</label>
+                  <input type="text" class="form-control" id="habil" name="habil" placeholder="Hablitações Literárias" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{1,15}$"><!--caixa para inserir o sobrenome com os requisitos aceites para a validação do mesmo-->
+                <br>
+                </div>
+              
+              <br><br>
+              <center>
+                <br><br><br>
+                  <h6>Conferências</h6>
+                  <div class="row" style="padding-top:20px"> <!--utilizá-mos o padding para alterar a distância das colunas a linha (ou seja ao título de cima)-->
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 1">Conferência 1</p>
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 5">Conferência 5</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 2">Conferência 2</p>
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 6">Conferência 6</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 3">Conferência 3</p>
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 7">Conferência 7</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 4">Conferência 4</p>
+                      <p id="p2"><input type="checkbox" name="conferencia" value="Conferência 8">Conferência 8</p>
+                    </div>
+                  </div>
+                  
+                <br>
+                  <h6>Workshops</h6>
+                  <div class="row" style="padding-top:20px">
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="workshop" value="Workshop 1">Workshop 1</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="workshop" value="Workshop 2">Workshop 2</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="workshop" value="Workshop 3">Workshop 3</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <p id="p2"><input type="checkbox" name="workshop" value="Workshop 4">Workshop 4</p>
+                    </div>
+                  </div>
+                <br><br><br>
+                  <h6>Reserva já o teu KIT!</h6>
+                  <p id="p2">Os dados de pagamento de cada elemento do KIT são enviados por email e pagos no dia do evento!</p>
+                  <br>
+                  <div class="row" style="padding-top:20px">
+                    <div class="col text-left">
+                      <img src="Imagens/kit/saco.png" alt="Saco" width="50%" style="border-radius:150px;"><br><br>
+                      <p id="p2"><input type="checkbox" name="kit" value="Saco">Saco</p>
+                    <br>
+                      <img src="Imagens/kit/caneta.png" alt="Canetas" width="50%" style="border-radius:150px;"><br><br>
+                      <p id="p2"><input type="checkbox" name="kit" value="Canetas">Canetas</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <img src="Imagens/kit/garrafa.png" alt="Garrafa" width="50%" style="border-radius:150px;"><br><br>
+                      <p id="p2"><input type="checkbox" name="kit" value="Garrafa de Água">Garrafa de Água</p>
+                    <br>
+                      <img src="Imagens/kit/pen.png" alt="Pen" width="50%" style="border-radius:150px;"><br><br>
+                      <p id="p2"><input type="checkbox" name="kit" value="Pen">Pen</p>
+                    </div>
+                    
+                    <div class="col text-left">
+                      <img src="Imagens/kit/caderno.png" alt="Bloco" width="50%" style="border-radius:150px;"><br><br>
+                      <p id="p2"><input type="checkbox" name="kit" value="Bloco de Notas">Bloco de Notas</p>
+                    <br>
+                      <img src="Imagens/kit/tel.png" alt="Suporte" width="50%" style="border-radius:150px;"><br><br>
+                      <p id="p2"><input type="checkbox" name="kit" value="Suporte Telemóvel">Suporte Telemóvel</p>
+                    </div>
+                  </div>
+
+                  <br><br><br>
+                  <h6>Certificado de Participação</h6>
+                  <div class="row" style="padding-top:20px">
+                    
+                  <div class="col text-left" style="padding-left:245px">
+                    <p id="p2" style="padding-left:100px"><input type="radio" name="certificado" value="Sim">Sim</p>
+                  </div>
+					
+                  <div class="col text-left" style="padding-right:300px">
+                    <p id="p2"><input type="radio" name="certificado" value="Não">Não</p>
+                  </div>
+                </div>
+                  
+                  <button class="button" style="cursor: pointer;" id="save" type="submit" onclick="guardar()" name="inscrver" value="Inscrição 10º Encontro de Multimédia" >Inscrever</button> <!--Botão para submeter a inscrição através de uma função para validar os campos em JavaScript mais abaixo-->
+                  <button class="button" style="cursor: pointer;" type="reset" name="reset" value="Apagar">Apagar</button> <!--Botão para apagar todos os dados de todos os campos do formulário-->
+                  <br><br><br>
+                  
+                <img src="Confirmação_email.gif" width="15%" style="border-radius: 120px;">
+                 
+                </div>
+                <br>
+    
+              </form>
+          </div>
+
+        </div>
+        
+    
+
+        <script>
+
+          function guardar(){
+          
+           //função para validar os campos do formulário
+            var nome = document.getElementById("nome"); //ir buscar o conteúdo da caixa de texto nome através do id e colocá-lo numa variável 
+            var sobrenome = document.getElementById("sobrenome"); //ir buscar o conteúdo da caixa de texto sobrenome através do id e colocá-lo numa variável
+            var email = document.getElementById("email"); //ir buscar o conteúdo da caixa de texto email através do id e colocá-lo numa variável
+            var nif = document.getElementById("nif"); //ir buscar o conteúdo da caixa de texto do nif através do id e colocá-lo numa variável
+            var telemovel = document.getElementById("telemovel"); //ir buscar o conteúdo da caixa de texto telemóvel através do id e colocá-lo numa variável 
+            var habil = document.getElementById("habil"); //ir buscar o conteúdo da caixa de texto habilitações através do id e colocá-lo numa variável 
+          
+          
+            if (nome.value == "") { //se o campo nome não foi preenchido então..
+              // Deixa o input com o focus
+              nome.focus(); //aparece uma mensagem a explicar porque o campo não está válido
+              // retorna a função e não olha as outras linhas
+              return;}
+          
+            if (sobrenome.value == "") { //se o campo sobrenome não foi preenchido então..
+              sobrenome.focus();
+              return;}
+          
+            if (email.value == "") { //se o campo email não foi preenchido então..
+              email.focus();
+              return;}
+          
+            if (nif.value == "") { //se o campo do nif não foi preenchido então..
+              mensagem.focus();
+              return;}
+          
+            if (telemovel.value == "") { //se o campo telemóvel não foi preenchido então..
+              mensagem.focus();
+              return;}
+          
+            if (habil.value == "") { //se o campo habilitações não foi preenchido então..
+              mensagem.focus();
+              return;}
+          
+          var textToWrite=     //*Criar texto que vai aparecer no documento
+            
+            'Inscrição no 10º Encontro de CDM:'+"\n"+
+            '-------------------------------------------------------'+"\n"+
+            
+            'Nome:'+document.getElementById("nome").value+"\n"+
+            'Sobrenome:'+document.getElementById("sobrenome").value+"\n"+
+            'Email:'+document.getElementById("email").value+"\n"+
+            'NIF:'+document.getElementById("nif").value+"\n"+
+            'Telemóvel:'+document.getElementById("telemovel").value+"\n"+
+            'Habilitações:'+document.getElementById("habil").value+"\n"+"\n"+
+            
+            'Conferências escolhidas: ' + document.getElementsByName("conferencia").value+"\n"+ 
+              'Workshops escolhidos: ' + document.getElementsByName("workshop").value+"\n"+
+              'KIT CDM: ' + document.getElementsByName("kit").value + "\n"+"\n"+ 
+            '-------------------------------------------------------'+"\n"+
+            'Cumprimentos da organização do 10º Encontro de CDM'
+          
+          var textFileAsBlob= new Blob([textToWrite], {  //* transformar o ficheiro txt em inalterável=blob
+            type:'text/plain'}); //* text/plain = .txt
+            
+          var fileNameToSaveAs=document.getElementById("save").value;
+          
+          var downloadLink=document.createElement("a");
+            downloadLink.download=fileNameToSaveAs;
+            
+            if(window.webkitURL !=null){
+              downloadLink.href=window.webkitURL.createObjectURL(textFileAsBlob);}
+            
+            downloadLink.click();
+          }
+          
+          
+          
+          </script>
+
+  <center> <!--footer alinhado ao centro-->
+    <footer class="footer justify-content-center"> <!--criar uma classe footer para estilizá-lo em CSS-->
+    <div class="container">
+        <div class="row" style="padding: 30px;"> <!--criar linha para contéudo do footer-->
+
+            <div class="col col-lg-4"> <!--Criar coluna com o espaço de 4 para o conteúdo em Bootstrap-->
+            <img src="logo.png" width="70px"> <!--inserimos o logo e definimos o tamanho-->   
+            </div>
+            
+            <div class="col col-lg-4">   
+            <p id="p3"> <br>encontrocdm@esec.pt </p>
+            </div>
+            
+            <div class="col col-lg-4">   
+            <p id="p3"> <br> Redes Sociais: 
+            <a href="#"><i class="bi bi-instagram" style="font-size: 30px;color:white; padding: 10px"></i></a> <!--inserir icons já predifinidos no banco de dados do Bootstrap-->
+            <a href="#"><i class="bi bi-whatsapp"style="font-size: 30px;color: white ; padding: 10px;"></i></a>
+            <a href="#"><i class="bi bi-twitter"style="font-size: 30px; color: white; padding: 10px;"></i></a>
+            </p>
+            </div>
+    </div>
+    </footer>
+</center>
+
+            
+    
+    <!--Este java tem haver com o nosso menu fixo ao topo que depois quando se faz scroll deixa de estar transparente e mudar de cor-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          //nav.classList.add('shadow')
+          nav.classList.add("nav-colored", "shadow");
+        nav.classList.remove("nav-transparent");
+        } else {
+          //nav.classList.remove('shadow');
+          nav.classList.add("nav-transparent");
+        nav.classList.remove("nav-colored","shadow" );
+        //as novas cores que este retoma estão alteradas no nosso css
+        }
+      });
+    </script>
+
+
+     <!--Script do botão de voltar ao topo-->
+     <script>
+      //Vai procurar o botão acima
+      var mybutton = document.getElementById("myBtn");
+    
+      // Quando o descer cerca 20px da página vai aparecer o botão
+      window.onscroll = function() {scrollFunction()};
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+      }
+    
+      // Quando carregar no botão volta ao topo da página
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+  </body>
+</html>

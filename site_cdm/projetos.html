@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!--link para aceder ao CSS external-->
+    <title>10º Encontro de CDM</title> <!--Título da página do browser-->
+    <link href="http://fonts.cdnfonts.com/css/gabo-drive" rel="stylesheet"> <!--Download de fontes para o site-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!--link da versão 5.1.3 do Bootstrap para ter um melhor design e usabilidade da página-->
+    <link href="//db.onlinewebfonts.com/c/0523f2813fe88b679addd37b3539660a?family=Gabo+Drive" rel="stylesheet" type="text/css"/> <!--Download de fontes para o site-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!--link para a biblioteca de icons do Bootstrap-->
+
+<!--PASTOR DEPOIS PODES CONFIRMAR OS LINKS QUE EU ESCREVI É QUE NÃO TENHO A CERTEZA-->
+
+<style>
+
+  /*CSS da 1ª maneira sendo que ainda não está totalmente editado - cópia do site da campanha*/
+  .conselho{
+    background-image: url('Imagens/projetos.png');
+    background-size: cover;
+    text-align: center;
+  }
+
+  #conselho_1{
+    font-size: 80px;
+    font-family:"GaboDrive";
+    color: azure;
+  }
+  #conselho_2{
+    font-size: 20px;
+    font-family: Montserrat;
+  }
+
+  /*CSS da segunda maneira - mudar aqui até arranjar maneira de mudar no própria css da outra folha*/
+  .banner-image {
+    background-image: url('Imagens/inicial.png');
+    background-size: cover;
+  }
+  
+  /*imagem de fundo da página*/
+  .banner-image-projetos {
+    background-image: url('Imagens/projetos.png');
+    background-size: cover;
+  }
+
+  .banner-image-projetos h2{
+    color: #EFA506;
+  }
+  
+  .footer {
+    background-color: #02023C;
+    padding: 2px 0 2px; 
+    font-size: 15px;
+    line-height: 24px;
+    color: white ;
+    align-items: center;
+    box-shadow: 0px 0px 2em rgba(255, 255, 255, 0.379);
+    -webkit-box-shadow: 0px 0px 2em rgba(255, 255, 255, 0.379);
+    -moz-box-shadow: 0px 0px 2em rgba(255, 255, 255, 0.379);
+    }
+
+	#projeto p{
+		color: #02023C;
+	}
+  
+	#projeto h3{
+		color: #65c3d2;
+	}
+
+	#projeto button {
+    background-color: white;
+    border: 2px solid #65C3D2;
+    color: #65C3D2;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
+
+#projeto button:hover {
+    border: 2px solid #65C3D2;
+    background-color: #65C3D2;
+    color: white;
+}
+</style>
+</head>
+
+  <body>
+
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3"> <!--colocar a nav bar fixa no topo da página para estar sempre presente em todo o scroll-->
+      <div class="container"> <!--Contentor para colocar conteúdo agrupado-->
+        <a class="navbar-brand" href="exemplo.html"> <img src="logo.png" alt="campanha" width="60px"> </a> <!--logo-->
+		
+        <!--botão que é criado para ficar responsivo
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        > 
+          <span class="navbar-toggler-icon"></span>
+        </button>-->
+		
+	<!--nomes das páginas na esquerda-->
+       <div class="collapse navbar-collapse navbar-light" id="navbarNav">
+        <div class="mx-auto"></div>
+          <ul class="navbar-nav"> <!--criar lista para apresentar as páginas na navbar-->
+            <li class="nav-item"> <!--criar uma classe "nav-item" para predifinir em CSS cada elemento da lista-->
+				<a class="nav-link text-white" href="sobre.html">Sobre o Encontro</a> <!--Criar hiperligação externa para outra página através do título-->
+            </li>
+            <li class="nav-item">
+				<a class="nav-link text-white" href="exemplo.html#agenda">Agenda</a>
+            </li>
+            <li class="nav-item">
+				<a class="nav-link text-white" href="inscricoes.html">Inscrições</a>
+            </li>
+            <li class="nav-item">
+				<a class="nav-link text-white" href="oradores.html">Oradores</a>
+            </li>
+            <li class="nav-item">
+				<a class="nav-link text-white" href="exposicoes.html">Exposições</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="projetos.html">Projetos</a>
+            </li>
+            <li class="nav-item">
+				<a class="nav-link text-white" href="contactos.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<!--BOTÃO TOPO-->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i></i></button>
+
+	<div class="banner-image-projetos w-100 vh-100 d-flex justify-center align-items-center"> <!--colocar a imagem de fundo-->
+		<div class="content text-center"> <!--criar uma caixa de texto alinhada ao centro-->
+			<div class="row justify-content-md-center"> <!--criar linha de texto justificada ao centro-->
+				<h1>Novidades dos Projetos CDM</h1> <!--Título com formatação h2-->
+				<p id="p2">É com orgulho que vos apresentamos alguns dos projetos multidisciplinares <!--criar outra predifinição em CSS do parágrafo para poder ser legível em cima das imagens através do (id="p2")-->
+				que foram desenvolvidos ao longo deste ano pelos anos de CDM.</p>
+				<br><br>
+				
+				<div class="col col-lg-3  text-center"> <!--Criar 3 colunas em Bootstrap com o contéudo alinhado ao centro-->
+					<br><br><br><a href="#k"><img src="Projetos/kinder2.png" alt="Kinder" width="75%"></a><br><br> <!--Inserir a imagem com uma hiperligação interna através do (a href="#k")-->
+				</div>
+				<div class="col col-lg-3  text-center">
+					<br><br><br><a href="#l"><img src="Projetos/livros2.png" alt="Viajar com Livros" width="75%"></a><br><br>
+				</div>
+				<div class="col col-lg-3  text-center">
+					<br><br><br><a href="#t"><img src="Projetos/tour2.png" alt="EsecTour" width="75%"></a><br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+<!--Textos dos Projetos-->
+<div id="projeto">
+	<div class="row justify-content-left" id="k"> <!--criar linha de texto justificada a esquerda com a hiperligação interna referida a cima através do (id="k")-->
+		
+		<div class="col text-left"> <!--criar uma coluna alinhada a esquerda para colocar a imagem a esquerda do texto-->
+			<img src="Projetos/kinder.png" alt="Kinder" width="80%" style="padding-left: 12%;"> <!--com o "width" a imagem vai ocupar 80% da coluna-->
+		</div>
+			  
+		<div class="col text-justify-content-right"> <!--criar uma coluna alinhada a direita para colocar o texto a direita da imagem-->
+			<h3>Projeto Kinder</h3>
+				<p>
+					O Projeto KINDER (Tackling gender stereotypes in education and early childhood: building a Gender-
+					Responsive Pedagogy in Children ś Education) (Grant 101005800, REC/DGJustice EC) está a ser desenvolvido
+					por uma equipa de investigação do Centro de Estudos Sociais (Universidade de Coimbra). Trata-se de um
+					projeto internacional realizado em parceria com instituições espanholas e croatas. O KINDER visa reforçar o
+					esforço Europeu no combate aos estereótipos de género com foco na educação para a infância: pré-escolar
+					(crianças dos 3 aos 6) e primeiro e segundo ciclos do ensino básico (crianças dos 7 aos 12). Teve início no dia 1
+					de janeiro de 2021, tem a duração de dois anos e pretende combater estereótipos de género na socialização e
+					educação de crianças entre os 3 e os 12 anos, partindo da premissa de que estes estão na base das profundas
+					desigualdades entre homens e mulheres ao longo da vida. Este projeto tem, em Portugal, parceria com a CIG
+					- Comissão para a Cidadania e a Igualdade de Género. Neste sentido, e com o objetivo de levarmos a cabo
+					ações com profissionais de educação e com os/as futuros/as professores/as, no âmbito do domínio da
+					igualdade de género, patente no 1.o grupo (obrigatório) da Estratégia Nacional de Educação para a Cidadania,
+					propomos realizar um trabalho conjunto com alunos/as e professores/as de vários cursos da Escola Superior
+					de Educação de Coimbra.
+				</p> <!--apesar do texto no código estar com quebra de linha no website não irá aparecer assim porque não tem <br>-->
+
+			<center> <!--alinhar o botão visitar site ao centro-->
+				<a href="https://kinder.ces.uc.pt/" target="_blank"> <!--hiperligação externa do site da Kinder no butão que vai abrir noutro separador graças ao (target="_blank")-->
+					<button class="button" style="cursor: pointer;">Visitar Site</button> <!--criar o botão para a hiperligação através de uma classe para estilizar no CSS-->
+				</a>
+			</center>
+				
+		</div>
+	</div>
+
+
+	<div class="row justify-content-left" id="l">
+			  
+		<div class="col text-justify-content-left"> <!--aqui o texto vai aparecer a esquerda da imagem-->
+			<h3>Projeto Viajar com Livros</h3>
+				<p>
+					O Projeto Viajar com Livros (em tempo de Pandemia) decorreu, entre 13 de maio e 18 de junho 2021, nas
+					escolas de Cabo Verde com a participação de mais 200 crianças e 60 fantásticos/as Contadores/as de
+					Histórias, entre os quais se destacam os/as alunos/as de Educação Básica e Teatro e Educação da ESEC.
+					Pensar a Escola enquanto lugar de decisão e de gestão curricular é pensar a prática pedagógica enquanto
+					atividade de investigação e de intervenção para a mudança. Considerando a Escola uma instituição que não se
+					esgota na instrução e que tem de ampliar o seu papel na formação de leitores, desenvolve-se o Projeto Viajar
+					com Livros.
+					O Projeto Viajar com Livros, coordenado pela Professora Sofia Gonçalves desde 2009 em Cabo Verde, visa
+					criar Bibliotecas Escolares nas várias ilhas do arquipélago. Este projeto nasceu com o apoio e colaboração da
+					empresa Mota- Engil, aquando da sua intervenção no porto de Palmeira na ilha do Sal.
+					Ao longo das edições que foram realizadas, o projeto contou com vários parceiros como a Embaixada de
+					Portugal em Cabo Verde, Mota- Engil, Ministério da Educação de Cabo Verde, Escolas Portuguesas e Cabo
+					Verdianas, Rede de Bibliotecas Municipais e, mais recentemente, juntaram-se as instituições Unesco, o Plano
+					Nacional de Leitura de Cabo Verde, o PLN 2027, a Rede de Bibliotecas Escolares, a Escola Superior de
+					Educação do Politécnico de Coimbra, a Fundação Manuel António da Mota e o KINDER (Centro de Estudos
+					Sociais da Universidade de Coimbra).
+				</p>
+
+			<center>
+				<a href="#" target="_blank"> <!--não tem hiperligação visto que não existe ainda site do projeto Viajar com Livros-->
+					<button class="button" style="cursor: pointer;">Visitar Site</button>
+				</a>
+			</center>
+
+		</div>
+			
+		<div class="col text-right"> <!--imagem do lado direito do texto-->
+			<img src="Projetos/viajar.png" alt="Viajar com Livros" width="90%" style="padding-left: 12%;"> <!--com o "padding" podemos definir o espaçamento da imagem em relação com o texto ou as margens no caso acima-->
+		</div>
+			
+	</div>
+
+
+	<div class="row justify-content-left" id="t">
+		
+		<div class="col text-left">
+			<img src="Projetos/Esec.png" alt="EsecTour" width="80%" style="padding-left: 12%;">
+		</div>
+			  
+		<div class="col text-left">
+			<h3>Projeto EsecTour</h3>
+				<p>
+					Nomenclatura que identifica de forma clara e imediata a entidade promotora do projeto (ESEC), bem como a
+					área e foco das suas atividades (turismo), utilizando a sua abreviatura em inglês (“tour”). Caraterística esta,
+					que permite assim, a sua utilização numa dimensão nacional e internacional. Ao mesmo tempo, poderá ainda
+					ser importante para a afirmação da marca ESEC, no seguimento de outras já existentes, como a ESECTV.
+				<br><br>
+					<b>Objetivos</b><br> <!--com o <b> </b> podemos tornar o texto que está dentro dessa tag a negrito-->
+						A ESECTOUR dirige-se à comunidade interna e externa da ESEC e pretende assumir-se como um centro de
+						divulgação e discussão de informação no âmbito do turismo e gastronomia, fazendo a ligação entre
+						Estudantes de diferentes áreas, e entre os Estudantes e os Mercados (consumidor e laboral).<br>
+						Os principais objetivos são:<br>
+						1. Estimular a investigação aplicada através de projetos de cariz técnico-prático desenvolvidos por Estudantes
+						e Docentes da ESEC;<br>
+						2. Desenvolver oportunidades de trabalho colaborativo com diferentes áreas do conhecimento, numa
+						conceção integrada com outros cursos da ESEC;<br>
+						3. Potenciar o contato entre Estudantes e Docentes da ESEC e Profissionais do sector do Turismo e
+						Gastronomia (e da comunidade/ região), fomentando oportunidades de co-working, co-criação e inovação;<br>
+						4. Divulgar iniciativas e trabalhos dos Estudantes e Docentes da ESEC.
+				</p>
+
+			<center>
+				<a href="https://www.esec.pt/investigacao/arquivo/esectour/" target="_blank">
+					<button class="button" style:="cursor: pointer;">Visitar Site</button>
+				</a>
+			</center>
+				
+		</div>
+	</div>
+</div>
+<!--FOOTER-->
+
+    <center> <!--Footer alinhado ao centro-->
+        <footer class="footer justify-content-center"> <!--criar uma classe footer para estilizá-lo em CSS-->
+            <div class="container">
+                <div class="row" style="padding: 30px;"> <!--criar linha para contéudo do footer-->
+
+					<div class="col col-lg-4"> <!--Criar coluna com o espaço de 4 para o conteúdo em Bootstrap-->
+						<img src="logo.png" width="70px">   
+					</div>
+                  
+					<div class="col col-lg-4">   
+						<p id="p2"> <br> encontrocdm@esec.pt </p>
+					</div>
+                  
+					<div class="col col-lg-4">   
+						<p id="p3"> <br> Redes Sociais: 
+							<a href="#"><i class="bi bi-instagram" style="font-size: 30px;color:white; padding: 10px;"></i></a> <!--inserir icons já predifinidos no banco de dados do Bootstrap-->
+							<a href="#"><i class="bi bi-whatsapp"style="font-size: 30px;color: white ; padding: 10px;"></i></a>
+							<a href="#"><i class="bi bi-twitter"style="font-size: 30px; color: white; padding: 10px;"></i></a>
+						</p>
+					</div>
+					
+				</div>
+        </footer>
+    </center>
+
+
+<!--Este java tem haver com o nosso menu fixo ao topo que depois quando se faz scroll deixa de estar transparente e muda para uma cor sólida para não se perder a leitura do conteúdo-->
+    <!--<script src="js/bootstrap.bundle.min.js"></script>-->
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          //nav.classList.add('shadow')
+          nav.classList.add("nav-colored", "shadow");
+        nav.classList.remove("nav-transparent");
+        } else {
+          //nav.classList.remove('shadow');
+          nav.classList.add("nav-transparent");
+        nav.classList.remove("nav-colored","shadow" );
+        //as novas cores que este retoma estão alteradas no nosso css
+        }
+      });
+    </script>
+
+	<!--Script do botão de voltar ao topo-->
+	<script>
+		//Vai procurar o botão acima
+		var mybutton = document.getElementById("myBtn");
+	  
+		// Quando o descer cerca 20px da página vai aparecer o botão
+		window.onscroll = function() {scrollFunction()};
+	  
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		  mybutton.style.display = "block";
+		  } else {
+		  mybutton.style.display = "none";
+		  }
+		}
+	  
+		// Quando carregar no botão volta ao topo da página
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+  </body>
+</html>

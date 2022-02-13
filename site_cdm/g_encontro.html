@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>10º Encontro de CDM</title>
+    <link href="http://fonts.cdnfonts.com/css/gabo-drive" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/0523f2813fe88b679addd37b3539660a?family=Gabo+Drive" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .design_galeria{
+        background-image: url('Imagens/Galeria/CDM/cdm.png');
+    background-size: cover;
+    text-align: center;
+width: 100%;
+height: 400px;     }
+
+.design_galeria .texto{
+  padding-top: 60px;
+}
+
+.design_galeria h1{
+    font-size: 60px;
+}
+
+.flex-column {
+            max-width: 29%;
+        }
+        
+        img {
+            margin: 5px;
+            border-radius: 5px;
+        }
+        
+        .scale {
+            transform: scaleY(1.05);
+            padding-top: 5px; 
+        }
+
+
+   </style>
+  </head>
+
+  <body>
+
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
+      <div class="container">
+        <a class="navbar-brand" href="exemplo.html"> <img src="logo.png" alt="campanha" width="60px"> </a>
+        <!--botão que é criado para ficar responsivo-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-light" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="sobre.html">Sobre o Encontro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#agenda">Agenda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="inscricoes.html">Inscrições</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="oradores.html">Oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="exposicoes.html">Exposições</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="projetos.html">Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contactos</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--BOTÃO TOPO-->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i></i></button>
+
+
+    <div class="design_galeria d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="texto">
+        <h1>Encontro de CDM</h1>
+        <p>Algumas fotogradias do evento e dos workshops realizados</p>
+        <a href="exposicoes.html#Galeria"><i class="new bi bi-arrow-left" style="color: white; font-size: 25px; padding-top: 20px;"></i></a>
+      </div>
+      </div>
+      </div>
+
+
+      <div class="container" style="padding: 70px;">
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+            <div class="d-flex flex-column">
+                <img src="Imagens/Galeria/CDM/1.JPG" class="img-fluid">
+                
+                <img src="Imagens/Galeria/CDM/3.JPG" class="img-fluid">
+                <img src="Imagens/Galeria/CDM/7.JPG" class="img-fluid ">
+            </div>
+            
+            <div class="d-flex flex-column">
+                <img src="Imagens/Galeria/CDM/4.JPG" class="img-fluid">
+                
+                <img src="Imagens/Galeria/CDM/2.JPG" class="img-fluid ">
+                <img src="Imagens/Galeria/CDM/6.JPG" class="img-fluid ">
+            </div>
+            
+            <div class="d-flex flex-column">
+                <img src="Imagens/Galeria/CDM/9.JPG" class="img-fluid ">
+                <img src="Imagens/Galeria/CDM/5.JPG"  class="img-fluid">
+                <img src="Imagens/Galeria/CDM/8.JPG" class="img-fluid ">
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--Este java tem haver com o nosso menu fixo ao topo que depois quando se faz scroll deixa de estar transparente e mudar de cor-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          //nav.classList.add('shadow')
+          nav.classList.add("nav-colored", "shadow");
+        nav.classList.remove("nav-transparent");
+        } else {
+          //nav.classList.remove('shadow');
+          nav.classList.add("nav-transparent");
+        nav.classList.remove("nav-colored","shadow" );
+        //as novas cores que este retoma estão alteradas no nosso css
+        }
+      });
+    </script>
+
+    <!--Script do botão de voltar ao topo-->
+    <script>
+      //Vai procurar o botão acima
+      var mybutton = document.getElementById("myBtn");
+    
+      // Quando o descer cerca 20px da página vai aparecer o botão
+      window.onscroll = function() {scrollFunction()};
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+      }
+    
+      // Quando carregar no botão volta ao topo da página
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+  </body>
+</html>
